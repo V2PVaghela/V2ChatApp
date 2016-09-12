@@ -82,7 +82,7 @@ class GroupsViewController: UIViewController,UITableViewDelegate,UITableViewData
       
       let dict = arrayGroupList.objectAtIndex(intGroupSelectionIndex)
       
-      if let name = dict["name"] as? String {
+      if let name = dict["jid"] as? String {
         controller.stringGroupName = name
       }
       

@@ -37,8 +37,8 @@ public class OneRoom: NSObject {
     
     let roomMemoryStorage = XMPPRoomMemoryStorage()
     let domain = OneChat.sharedInstance.xmppStream!.myJID.domain
-    let roomJID = XMPPJID.jidWithString("\(roomName)@conference.\(domain)")
-    
+    //let roomJID = XMPPJID.jidWithString("\(roomName)@conference.\(domain)")
+    let roomJID = XMPPJID.jidWithString("\(roomName)")
     sharedInstance.xmppRoom = XMPPRoom(roomStorage: roomMemoryStorage, jid: roomJID, dispatchQueue: dispatch_get_main_queue())
     
     sharedInstance.xmppRoom.activate(OneChat.sharedInstance.xmppStream)
