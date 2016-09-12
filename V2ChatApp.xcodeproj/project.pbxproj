@@ -16,6 +16,8 @@
 		66F925611D6D82A500C8BE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F925601D6D82A500C8BE0C /* Assets.xcassets */; };
 		66F925641D6D82A500C8BE0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F925621D6D82A500C8BE0C /* LaunchScreen.storyboard */; };
 		7416EB673B655293326D6563 /* Pods_V2ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D9F1694F326A2B10A0B307 /* Pods_V2ChatApp.framework */; };
+		C3C1D3641D868C3500C3731B /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1D3631D868C3500C3731B /* GroupsViewController.swift */; };
+		C3C1D3661D868C4800C3731B /* GroupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1D3651D868C4800C3731B /* GroupChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		66F925651D6D82A500C8BE0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89E7D94E86DDB1E961083E9B /* Pods-V2ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-V2ChatApp/Pods-V2ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A351DAEEBA7ABC3E42C4E9BD /* Pods-V2ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2ChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-V2ChatApp/Pods-V2ChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		C3C1D3631D868C3500C3731B /* GroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		C3C1D3651D868C4800C3731B /* GroupChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				666E39A11D6D84A40065BD9A /* ChatViewController.swift */,
 				666E39A31D6D84B20065BD9A /* ContactListTableViewController.swift */,
 				666E39A51D6D84BE0065BD9A /* SettingsViewController.swift */,
+				C3C1D3631D868C3500C3731B /* GroupsViewController.swift */,
+				C3C1D3651D868C4800C3731B /* GroupChatViewController.swift */,
 				66F9255D1D6D82A500C8BE0C /* Main.storyboard */,
 				66F925601D6D82A500C8BE0C /* Assets.xcassets */,
 				66F925621D6D82A500C8BE0C /* LaunchScreen.storyboard */,
@@ -220,8 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C1D3661D868C4800C3731B /* GroupChatViewController.swift in Sources */,
 				66F9255A1D6D82A500C8BE0C /* AppDelegate.swift in Sources */,
 				666E39A21D6D84A40065BD9A /* ChatViewController.swift in Sources */,
+				C3C1D3641D868C3500C3731B /* GroupsViewController.swift in Sources */,
 				666E39A41D6D84B20065BD9A /* ContactListTableViewController.swift in Sources */,
 				666E39A61D6D84BE0065BD9A /* SettingsViewController.swift in Sources */,
 				666E39A01D6D84970065BD9A /* OpenChatsTableViewController.swift in Sources */,
