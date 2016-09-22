@@ -96,7 +96,14 @@ class ContactListTableViewController: UITableViewController, OneRosterDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         let user = OneRoster.userFromRosterAtIndexPath(indexPath: indexPath)
-        
+        if user.jid.isFull() {
+            print("Full")
+        }
+        if user.jid.isBare() {
+            print("Bare")
+        }
+
+        print(user.displayName, user.jid.full())
         cell!.textLabel!.text = user.displayName;
         cell!.detailTextLabel?.hidden = true
         
