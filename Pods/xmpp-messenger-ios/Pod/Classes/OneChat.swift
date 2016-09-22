@@ -269,7 +269,7 @@ public class OneChat: NSObject {
 			streamDidConnectCompletionBlock = completion //was false
 			streamDidConnectCompletionBlock!(stream: self.xmppStream!, error: DDXMLElement(name: "Bad password"))
 		}
-        xmppStream!.hostName = "v2mummac0024.local"
+        xmppStream!.hostName = "192.168.15.157"
         xmppStream!.hostPort = 5222
         
 		try! xmppStream!.connectWithTimeout(XMPPStreamTimeoutNone)

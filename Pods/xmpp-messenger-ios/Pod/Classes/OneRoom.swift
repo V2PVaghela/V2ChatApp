@@ -51,7 +51,7 @@ public class OneRoom: NSObject {
   
   public func getRooms(){
     
-    let server: String = "conference.v2mummac0024.local"
+    let server: String = "conference.v2mummac0024.local"//"conference.v2mummac0024.local"
     let servrJID: XMPPJID = XMPPJID.jidWithString(server)
     let iq: XMPPIQ = XMPPIQ.iqWithType("get", to: servrJID)
     iq.addAttributeWithName("id", stringValue: "chatroom_list")
