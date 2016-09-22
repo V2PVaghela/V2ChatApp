@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
             if NSUserDefaults.standardUserDefaults().stringForKey(kXMPP.myJID) != "kXMPPmyJID" {
                 usernameTextField.text = NSUserDefaults.standardUserDefaults().stringForKey(kXMPP.myJID)
                 passwordTextField.text = NSUserDefaults.standardUserDefaults().stringForKey(kXMPP.myPassword)
-                usernameTextField.text = "admin@v2mummac0024.local"
+                usernameTextField.text = "harshal@v2mummac0024.local"
                 passwordTextField.text = "mail_123"
             }
         }

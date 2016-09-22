@@ -44,6 +44,7 @@ public class OneRoom: NSObject {
     sharedInstance.xmppRoom.activate(OneChat.sharedInstance.xmppStream)
     sharedInstance.xmppRoom.addDelegate(delegate, delegateQueue: dispatch_get_main_queue())
     print(OneChat.sharedInstance.xmppStream!.myJID.bare())
+    
     sharedInstance.xmppRoom.joinRoomUsingNickname(OneChat.sharedInstance.xmppStream!.myJID.bare(), history: nil, password: nil)
     sharedInstance.xmppRoom.fetchConfigurationForm()
   }
@@ -123,6 +124,9 @@ extension OneRoom: XMPPRoomDelegate {
       }
       
       self.delegate?.reciveGroupList(arrayGroup)
+      
+      
+      print("")
       
       return true
     }

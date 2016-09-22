@@ -10,7 +10,7 @@ import UIKit
 import XMPPFramework
 import xmpp_messenger_ios
 
-class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GroupMessageDelegate {
+class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,GroupMessageDelegate,UITextFieldDelegate {
   
   //MARK: - iVar Declaration
   
@@ -29,6 +29,9 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     OneMessage.sharedInstance.delegateGroupMessage = self
     OneRoom.createRoom(stringGroupName) { (sender) in
+      
+      
+      
     }
     
     self.tableViewGroupChat.rowHeight = 50
@@ -82,6 +85,21 @@ class GroupChatViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     let indexPath = NSIndexPath(forRow: self.arrayGroupMessages.count-1, inSection: 0)
     self.tableViewGroupChat.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Middle, animated: true)
+  }
+  
+  
+  func textFieldShouldEndEditing(textField: UITextField) -> Bool{
+    
+    self.textFieldMessage.resignFirstResponder()
+    return true
+    
+  }
+  
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+  
+    self.textFieldMessage.resignFirstResponder()
+    return true
+    
   }
   
   //MARK: - MemoryManagement Method

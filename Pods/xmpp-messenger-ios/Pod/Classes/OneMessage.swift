@@ -68,6 +68,9 @@ public class OneMessage: NSObject {
     completeMessage.addAttributeWithName("to", stringValue: receiver)
     completeMessage.addChild(body)
     
+    print("\(receiver)")
+    print("\(completeMessage)")
+    
     sharedInstance.didSendMessageCompletionBlock = completion
     OneChat.sharedInstance.xmppStream?.sendElement(completeMessage)
   }
@@ -77,9 +80,13 @@ public class OneMessage: NSObject {
       let message = DDXMLElement.elementWithName("message") as! DDXMLElement
       message.addAttributeWithName("type", stringValue: "chat")
       message.addAttributeWithName("to", stringValue: recipient)
+  
+      print("\(recipient)")
       
       let composing = DDXMLElement.elementWithName("composing", stringValue: "http://jabber.org/protocol/chatstates") as! DDXMLElement
       message.addChild(composing)
+      
+      print("\(message)")
       
       sharedInstance.didSendMessageCompletionBlock = completion
       OneChat.sharedInstance.xmppStream?.sendElement(message)
@@ -194,7 +201,13 @@ extension OneMessage: XMPPStreamDelegate {
   
   public func xmppStream(sender: XMPPStream, didReceiveMessage message: XMPPMessage) {
     
-    let type = message.attributeForName("type").stringValue()
+    var type:String = ""
+    
+    if let messageType = message.attributeForName("type")?.stringValue()
+    {
+        type = message.attributeForName("type").stringValue()
+    }
+
     if type == "groupchat" {
       
       var dictGroupMessage = [String: String]()

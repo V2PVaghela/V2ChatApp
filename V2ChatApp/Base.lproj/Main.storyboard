@@ -448,11 +448,15 @@
                                     <constraint firstAttribute="height" constant="30" id="haO-Qx-p6X"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7ti-eG-IAr" id="hCh-gh-q3A"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxf-P2-JS9">
                                 <rect key="frame" x="181" y="140" width="238" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="B2F-Kt-eru"/>
                                     <constraint firstAttribute="height" constant="30" id="YHY-oR-2hA"/>
                                 </constraints>
                                 <state key="normal" title="Send"/>
@@ -485,12 +489,11 @@
                             <constraint firstAttribute="trailing" secondItem="qly-ug-4NZ" secondAttribute="trailing" id="1FG-Fd-wwf"/>
                             <constraint firstItem="GD5-Ez-WHc" firstAttribute="top" secondItem="Ba8-an-BRu" secondAttribute="bottom" constant="36" id="7tr-LZ-Dzy"/>
                             <constraint firstItem="qly-ug-4NZ" firstAttribute="leading" secondItem="G30-Wa-pDp" secondAttribute="leading" id="7wQ-yC-N3S"/>
-                            <constraint firstItem="cxf-P2-JS9" firstAttribute="leading" secondItem="G30-Wa-pDp" secondAttribute="leading" constant="181" id="Ee5-7T-Lfc"/>
                             <constraint firstItem="T0T-jX-Qib" firstAttribute="top" secondItem="qly-ug-4NZ" secondAttribute="bottom" id="Eut-Wa-BtN"/>
                             <constraint firstItem="cxf-P2-JS9" firstAttribute="top" secondItem="GD5-Ez-WHc" secondAttribute="bottom" constant="10" id="HMA-w3-eN0"/>
                             <constraint firstItem="GD5-Ez-WHc" firstAttribute="leading" secondItem="G30-Wa-pDp" secondAttribute="leading" constant="50" id="ZOZ-mN-dRj"/>
-                            <constraint firstAttribute="trailing" secondItem="cxf-P2-JS9" secondAttribute="trailing" constant="181" id="bLF-mr-es3"/>
                             <constraint firstItem="qly-ug-4NZ" firstAttribute="top" secondItem="cxf-P2-JS9" secondAttribute="bottom" constant="36" id="gsc-uS-HZR"/>
+                            <constraint firstItem="cxf-P2-JS9" firstAttribute="centerX" secondItem="G30-Wa-pDp" secondAttribute="centerX" id="ivi-au-QOz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Y7-88-dUV"/>

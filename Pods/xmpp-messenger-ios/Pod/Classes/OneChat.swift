@@ -256,7 +256,8 @@ public class OneChat: NSObject {
 		}
 		
 		if let jid = NSUserDefaults.standardUserDefaults().stringForKey(kXMPP.myJID) {
-			xmppStream?.myJID = XMPPJID.jidWithString(jid)
+			//xmppStream?.myJID = XMPPJID.jidWithString(jid)
+      xmppStream?.myJID = XMPPJID.jidWithString(jid, resource: "Kunal")
 		} else {
 			streamDidConnectCompletionBlock = completion //was false
 			streamDidConnectCompletionBlock!(stream: self.xmppStream!, error: DDXMLElement(name: "Bad username"))
